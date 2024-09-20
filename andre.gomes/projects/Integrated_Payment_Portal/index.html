@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="description" content="This is the page with my resume">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon.png">
+	<meta name="author" content="André Gomes">
+	<title>Project - Andre Gomes</title>
+	<link rel="stylesheet" href="../../css/themes.css">
+	<link rel="stylesheet" type="text/css" charset="UTF-8"
+		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
+	<!-- https://svgl.app/directory/software -->
+
+	<!-- This setup is not suitable for production. -->
+	<!-- Only use it in development! -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<script type="importmap">
+      {
+        "imports": {
+      	"react": "https://esm.sh/react?dev",
+      	"react-dom/client": "https://esm.sh/react-dom/client?dev"
+        }
+      }
+    </script>
+</head>
+
+<body>
+	<div id="root"></div>
+</body>
+
+<script type="text/babel" data-type="module">
+	import React, { StrictMode } from 'react';
+	import { createRoot } from 'react-dom/client';
+	import Slider from 'react-slick';
+
+	const HeadData = () => {
+		return (
+			<section className="headData">
+				<img src="../../images/sign.png" alt="Sign" className="signImage" />
+				<div className="headContact">
+					<p>alfgomes@outlook.com</p>
+					<p>(438) 465-9624</p>
+					<p id="locale"></p>
+				</div>
+			</section>
+		);
+	};
+
+
+
+
+	const ProjectDetails = () => {
+		const images = [
+			'../image/image_1.jpg',
+			'../image/image_2.jpg',
+			'../image/image_3.jpg'
+		];
+
+		const settings = {
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		};
+
+		return (
+			<div className="project-details">
+				<button className="return-button" onClick={() => window.history.back()}>Return</button>
+				<h1>Project Title</h1>
+				<Slider {...settings}>
+					{images.map((image, index) => (
+						<div key={index}>
+							<img src={image} alt={`Project image ${index + 1}`} className="carousel-image" />
+						</div>
+					))}
+				</Slider>
+				<div className="text-blocks">
+					<div className="text-block">
+						<h2>Overview</h2>
+						<p>This project is a web application that allows users to manage tasks efficiently. It was built using React and Node.js.</p>
+					</div>
+					<div className="text-block">
+						<h2>Technologies Used</h2>
+						<p>Technologies used in this project include React, Redux, Node.js, Express, and MongoDB.</p>
+					</div>
+					<div className="text-block">
+						<h2>Features</h2>
+						<p>This application includes features such as user authentication, task management, and an intuitive user interface.</p>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
+
+
+
+
+	const FooterData = () => {
+		return (
+			<div style={stylesFooter.section}>
+				<img style={stylesFooter.section.profileImg} src="../../images/profile.png" alt="Profile" />
+				<div>
+					<p style={stylesFooter.section.text}>© 2024 Andre Gomes</p>
+					<p style={stylesFooter.section.text}>alfgomes@outlook.com</p>
+				</div>
+			</div>
+		);
+	};
+
+	const stylesFooter = {
+		section: {
+			backgroundColor: '#ffffff',
+			color: '#000000',
+			padding: '20px',
+			borderRadius: '8px',
+			marginTop: '10px',
+			profileImg: {
+				backgroundColor: '#000000',
+				borderRadius: '50%',
+				width: '120px',
+				height: '120px',
+				marginTop: '10px',
+				marginBottom: '15px',
+				border: '1px solid #4a4e69',
+			},
+			text: {
+				marginTop: '0px',
+				marginBottom: '5px',
+				padding: 0,
+			},
+		},
+	};
+
+
+
+
+	const Resume = () => {
+		return (
+			<div style={stylesResume.container}>
+				<HeadData />
+				<ProjectDetails />
+			</div>
+		);
+	};
+
+	const stylesResume = {
+		container: {
+			maxWidth: '98%',
+			margin: '0 auto',
+			padding: '20px',
+			fontFamily: 'Arial',
+			backgroundColor: '#f5f5f5',
+			borderRadius: '10px',
+			boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+		},
+		header: {
+			textAlign: 'center',
+			color: '#2c3e50',
+			marginBottom: '30px',
+		},
+	};
+
+	let App = () => {
+		return (
+			<div className="App">
+				<Resume />
+				<center>
+					<FooterData />
+				</center>
+			</div>
+		);
+	};
+
+	const root = createRoot(document.getElementById('root'));
+	root.render(
+		<StrictMode>
+			<App />
+		</StrictMode>
+	);
+</script>
+
+<style>
+	body {
+		background-color: #272727;
+		color: #ffffff;
+		font-family: 'Arial';
+		margin: 0;
+		padding: 0;
+	}
+
+	.App {
+		max-width: 85%;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: rgb(176, 176, 176);
+		/* White background for the resume */
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	h1 {
+		text-align: center;
+		color: #4a4e69;
+		/* Dark pastel color */
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px 0 rgba(90, 90, 90, 1.0);
+	}
+
+	h2 {
+		color: #2ab0ff;
+		/* Light pastel blue */
+		border-bottom: 2px solid #2ab0ff;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		text-shadow: 2px 2px 0 rgba(90, 90, 90, 1.0);
+	}
+
+	section {
+		margin-bottom: 30px;
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 10px 10px 10px rgba(90, 90, 90, 0.8);
+	}
+
+	.headData {
+		background-color: #ffffff;
+		color: #000000;
+		height: 120px;
+		min-height: 120px;
+		max-height: 120px;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	.signImage {
+		background-color: #ffffff;
+		width: 200pt;
+		height: 90pt;
+		margin-bottom: 15px;
+		position: relative;
+		float: left;
+	}
+
+	.headContact {
+		float: right;
+		text-align: right;
+	}
+
+	@media all and (max-width: 620px) {
+		.signImage {
+			width: 50%;
+			height: 85%;
+		}
+	}
+
+	@media all and (max-width: 505px) {
+		.headData {
+			height: 85px;
+			min-height: 85px;
+			max-height: 85px;
+		}
+
+		.headContact {
+			font-family: 'Arial';
+			font-size: 0.75rem;
+		}
+
+		.signImage {
+			width: 40%;
+			height: 75%;
+		}
+	}
+
+	@media all and (max-width: 340px) {
+		.headData {
+			min-height: 130px;
+			max-height: 130px;
+		}
+
+		.signImage {
+			width: 40%;
+			height: 35%;
+		}
+	}
+
+	.project-details {
+		padding: 20px;
+		text-align: center;
+		background-color: #f4f4f4;
+		height: 100vh;
+		overflow-y: auto;
+		/* Allow scrolling if content overflows */
+	}
+
+	.return-button {
+		background-color: #007BFF;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+
+	.return-button:hover {
+		background-color: #0056b3;
+		/* Darker blue on hover */
+	}
+
+	.carousel-image {
+		width: 100%;
+		max-height: 400px;
+		/* Set max height for images */
+		object-fit: cover;
+		/* Cover the area without distorting aspect ratio */
+	}
+
+	.text-blocks {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.text-block {
+		background-color: white;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		padding: 20px;
+		margin: 0 10px;
+		width: 30%;
+		/* Adjust width as needed */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.text-block h2 {
+		margin-top: 0;
+	}
+</style>
+
+<script type="text/javascript">
+	$.ajax({
+		url: "https://geolocation-db.com/jsonp",
+		jsonpCallback: "callback",
+		dataType: "jsonp",
+		success: function (location) {
+			if (location.city == 'Toronto')
+				$('#locale').html('Toronto / ON');
+			else
+				$('#locale').html('Montreal / QC');
+		}
+	});
+
+	// Disable right-click context menu
+	document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
+</html>

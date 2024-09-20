@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
-    <meta name="author" content="André Gomes">
-    <title>Resume - Andre Gomes</title>
-    <link rel="stylesheet" href="css/themes.css">
-    
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="description" content="This is the page with my resume">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+	<meta name="author" content="André Gomes">
+	<title>Resume - Andre Gomes</title>
+	<link rel="stylesheet" href="css/themes.css">
+
 	<!-- https://svgl.app/directory/software -->
-	
-    <!-- This setup is not suitable for production. -->
-    <!-- Only use it in development! -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
-    <script type="importmap">
+
+	<!-- This setup is not suitable for production. -->
+	<!-- Only use it in development! -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<script type="importmap">
       {
         "imports": {
       	"react": "https://esm.sh/react?dev",
@@ -26,738 +31,966 @@
         }
       }
     </script>
-  </head>
-  
-  <body>
-    <div id="root"></div>
-  </body>
-  
-  <script type="text/babel" data-type="module">
-  	import React, { StrictMode } from 'react';
-  	import { createRoot } from 'react-dom/client';
-  
-  	const HeadData = () => {
-  	  return (
-  		<section className="headData">
-		  <img src="images/sign.png" alt="Sign" className="signImage" />
-		  <div className="headContact">
-  		    <p>alfgomes@outlook.com</p>
-  		    <p>(438) 465-9624</p>
-  		    <p>Montreal / QC</p>
-		  </div>
-  		</section>
-  	  );
-  	};
-	
-  	const AboutMe = () => {
-  	  return (
-  		<section className="aboutMe">
-  		  <h2>Who is André?</h2>
-  		  <img src="images/photo.jpg" alt="Photo" className="photoImage" />
-  		  <p>Software Developer with International Expertise</p>
-  		  <p>Since 2002, I have been working as a software developer, bringing a unique combination of experience and innovation to the market. Born in Brazil and also a Portuguese citizen, I am a self-taught entrepreneur with an insatiable passion for technology.</p>
-  		  <p>With a certification from the Collège National de Science et Technologie University, I have hands-on experience in several programming languages. My approach is focused on efficient problem-solving and creating clean, functional code, ensuring technological solutions that meet the needs of my clients.</p>
-  		</section>
-  	  );
-  	};
-  	
-  	
-  	
-  	
-  	
-  	const Experience = () => {
-  	  const experiences = [
-  		{
-  		  title: 'Senior Software Engineer',
-  		  company: 'Intrum Portugal',
-		  localization: 'Lisbon',
-		  country: 'Portugal',
-  		  duration: 'Sep 2020 – Jul 2022',
-  		  description: 'Lead developer of new projects. I developed the web system for integrations between different payment methods using Web APIs and WebServices from different financial institutions to implement secure payment routines.',
-          company_activity: 'Debt Collection Company',
-  		},
-  		{
-  		  title: 'Software Engineer',
-  		  company: 'Thales Edisoft Portugal',
-		  localization: 'Lisbon',
-		  country: 'Portugal',
-  		  duration: 'Mar 2020 – Sep 2020',
-  		  description: 'Development and maintenance of various tools and components within the project of the monitoring and control system for aircraft positioned on the ground and aircraft approaching for landing and take-off, as well as the roll to the runway, from back-end (Java) to front-end end (.NET). Write requirements and tests, and develop solutions. Refactoring older components to optimize performance and implement modern standards and patterns and migrating code from Java 6 to Java 11.',
-  		  company_activity: 'Air Control and Defense System',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'Altice Portugal',
-		  localization: 'Lisbon',
-		  country: 'Portugal',
-  		  duration: 'Sep 2019 – Mar 2020',
-  		  description: 'Corrective and preventive maintenance, and development of small features in the SFA (Sales Force Automation) application, which manages product sales in the physical store and call center channels.',
-  		  company_activity: 'Telecommunications',
-  		},
-  		{
-  		  title: 'Autonomous Software Engineer',
-  		  company: 'Bee Engineering',
-		  localization: 'Lisbon',
-		  country: 'Portugal',
-  		  duration: 'Oct 2016 – Nov 2019',
-  		  description: '- When I was assigned to Banco BPI, I was part of the BI team, where I developed ETLs with information about the KPIs defined for display on screens spread throughout the building\'s floors.\\n\\r- During my time at the company\'s office, I implemented corrections and new features for internal projects. I also worked as Team Leader on some internal projects. In addition to giving classes on .Net CORE, Entity Framework and MVC technology to new members.\\n\\r- When I worked on the Vodafone project, I refactored the online package sales system together with the team.',
-  		  company_activity: 'IT Consulting',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'CTT - Correios de Portugal',
-		  localization: 'Lisbon',
-		  country: 'Portugal',
-  		  duration: 'Jul 2016 – Oct 2016',
-  		  description: 'I worked with corrective development of the EDM system (Electronic Document Management).',
-  		  company_activity: 'Post Company',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'Techint Engineering & Construction',
-		  localization: 'São Paulo, Rio de Janeiro, Paraná',
-		  country: 'Brazil',
-  		  duration: 'Feb 2013 – Mar 2016',
-  		  description: 'I worked on the Systems Engineering team, participating in some projects such as: OSX, Comperj and CTTP76 (Petroleum Platform of Petrobrás). Idealized, developed and implemented the WareHousePlus system (warehouse management). I was responsible for implementing the Electronic RIR system and deploying it in all works and maintaining its operation. Developed and implemented the Absenteeism Control Dashboard at the CTTP76 site using SQL Server as datawarehouse and creation of ETLs and TIBCO Spotfire to generate graphs and dynamic reports.',
-  		  company_activity: 'Engineering and Construction',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'D-Click Web & Mobile Solutions',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Apr 2012 – Feb 2013',
-  		  description: 'I worked for the client Techint Engineering & Construction (an outsourcing basis) developing a WPF system for integration between the SmartPlantMaterials system, SAP and EPCPlan (the client\'s own system).',
-  		  company_activity: 'IT Consulting',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'ECO Sistemas',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Feb 2012 – Apr 2012',
-  		  description: 'I worked at this company on an outsourcing basis for the State Health Department, developing applications for emergency health care units and for the fire department.',
-  		  company_activity: 'IT Consulting',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'Prodata Mobility Brasil',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Oct 2011 – Feb 2012',
-  		  description: 'I worked on applications that recorded values (binary data) on electronic transport tickets.\\n\\rWe used Delphi 7 to implement the card reading/writing system that would be used in bus validators and .Net to develop the reporting system.',
-  		  company_activity: 'Transportation Ticket System',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'Modal Bank',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Mar 2011 – Oct 2011',
-  		  description: 'I integrated a team along with 9 other people responsible for the development of the Internet Banking portal for the bank\'s customers.\\n\\rWe used a suite of visual components developed exclusively for the bank, which made page development faster, but less intuitive. The development was based on SCRUM methodology and we had a development approach based on TDD.',
-  		  company_activity: 'Bank',
-  		},
-  		{
-  		  title: 'Software Development Team Lead',
-  		  company: 'Mongeral Aegon Insurance and Pensions',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Sep 2007 – Mar 2011',
-  		  description: 'I joined the company to lead the team of developers of the ERP Commissioning module that was being developed specifically to manage the company\'s insurance, pension and credit products and I was the technical responsible for this team to design and implement the system\'s core module, and integration for all other ERP modules through the use of APIs.\\n\\rWe used NHibernate as ORM, and the development was based on the SCRUM methodology and we had a development approach based on DDD and TDD.',
-  		  company_activity: 'Insurance',
-  		},
-  		{
-  		  title: 'Senior Fullstack Developer',
-  		  company: 'TEMA Systems',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Jan 2007 – Jul 2007',
-  		  description: 'I worked at the company in a team that developed solutions to optimize customer\'s financial resources.',
-  		  company_activity: 'IT Consulting, Specialized for banks',
-  		},
-  		{
-  		  title: 'Fullstack Developer',
-  		  company: 'Secretaria da Fazenda',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Dec 2004 – Jan 2007',
-  		  description: 'I was assigned to take care of the applications for filling taxable information (GIA and DECLAN) developed in Delphi 7 that were sent to taxpayers (companies) so that they could make their tax returns to the State.\\n\\rI was also responsible for maintaining an application developed in Java within the SEFAZ portal where taxpayers could consult the status of the statements sent.',
-  		  company_activity: 'Public Administration of Government Finance Management',
-  		},
-  		{
-  		  title: 'Fullstack Developer',
-  		  company: 'Tribunal de Contas do Estado',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Aug 2003 – Dec 2004',
-  		  description: 'I was part of the development team for the SIGFIS system, which was a management system for monitoring public expenditures in municipalities.',
-  		  company_activity: 'Public Administration of Government Finance Management',
-  		},
-  		{
-  		  title: 'Team Leader ⇒ Developer',
-  		  company: 'Lojas Americanas Distribution Center',
-		  localization: 'Rio de Janeiro',
-		  country: 'Brazil',
-  		  duration: 'Sep 2000 - Jul 2003',
-  		  description: 'Starting at the company as an Administrative Assistant, I was soon promoted to team supervisor, so as a supervisor I developed small applications with the aim of optimizing my time as a manager and the visibility of these applications gave me the opportunity to start a project to implement larger applications in the unit. and with that I developed a communication portal on the intranet, transformed several existing paper forms into electronic forms and developed an application to generate new optimized picking labels, taking advantage of all the space on the labels including all the necessary information (which were previously written by hand ), reducing costs and increasing the productivity of all CD teams.',
-  		  company_activity: 'Logistics, Transport and Warehousing',
-  		},
-  	  ];
-  
-  	  return (
-  		<section className="experience">
-		  <article>
-  		    <h2>Experiences</h2>
-  		    <ul>
-  		  	  {experiences.map((exp, index) => (
-  		  	  <li key={index} style={stylesExperiences.experienceItem}>
-		  	    <details>
-		  	  	  <summary>
-		  	  	    <span className="experienceTitle">{exp.title} at {exp.company}</span>
-   		  	  	    <span style={stylesExperiences.experienceItem.duration}><strong>{exp.duration}</strong></span>
-		  	  	  </summary>
-   		  	  	  <p style={stylesExperiences.experienceItem.description}>{exp.description}</p>
-				  <p><span style={stylesExperiences.experienceItem.country.title}>Country:</span> <span style={stylesExperiences.experienceItem.country.text}>{exp.country}</span></p>
-   		  	  	  <p><span style={stylesExperiences.experienceItem.companyActivity.title}>Company Activity:</span> <span style={stylesExperiences.experienceItem.companyActivity.text}>{exp.company_activity}</span></p>
-		  	  	</details>
-  		  	  </li>
-  		  	))}
-  		    </ul>
-		  </article>
-  		</section>
-  	  );
-  	};
-  	
-  	const OccasionalExperience = () => {
-  	  const occasionalExperiences = [
-  		{
-  		  title: 'Painter Labour',
-  		  company: 'Notari Daniel Renovations',
-		  localization: 'Dieppe-NB',
-		  country: 'Canada',
-  		  duration: 'May 2024 – Aug 2024',
-  		  description: 'During my time at the company, I performed the tasks: Treatment and sanding of Walls and Ceilings, and treatment and sanding of Doors, Trim and Baseboard, and finishing painting on Baseboards and Walls o  		  Newly Constructed Homes',
-  		  company_activity: 'Construction',
-  		},
-  		{
-  		  title: 'Construction Operator',
-  		  company: 'Silver Oak Construction and Renovation',
-		  localization: 'Moncton-NB',
-		  country: 'Canada',
-  		  duration: 'Jan 2024 – May 2024',
-  		  description: 'During my time at the company, I performed the tasks: Painting walls and ceilings of houses, Installation of luminaires and sockets, Installation of subfloors, Framing job and Installation of Insulation, Installation of Vinyl floors',
-  		  company_activity: 'Construction & Renovation',
-  		},
-  	  ];
-  
-  	  return (
-  		<section className="occasionalExperience">
-		  <article>
-  		    <h2>Occasional Experiences</h2>
-  		    <ul>
-  		  	  {occasionalExperiences.map((exp, index) => (
-  		  	  <li key={index} style={stylesExperiences.experienceItem}>
-		  	    <details>
-		  	  	  <summary>
-		  	  	    <span className="experienceTitle">{exp.title} at {exp.company}</span>
-   		  	  	    <span style={stylesExperiences.experienceItem.duration}><strong>{exp.duration}</strong></span>
-		  	  	  </summary>
-   		  	  	  <p style={stylesExperiences.experienceItem.description}>{exp.description}</p>
-				  <p><span style={stylesExperiences.experienceItem.country.title}>Country:</span> <span style={stylesExperiences.experienceItem.country.text}>{exp.country}</span></p>
-   		  	  	  <p><span style={stylesExperiences.experienceItem.companyActivity.title}>Company Activity:</span> <span style={stylesExperiences.experienceItem.companyActivity.text}>{exp.company_activity}</span></p>
-		  	  	</details>
-  		  	  </li>
-  		  	))}
-  		    </ul>
-		  </article>
-  		</section>
-  	  );
-  	};
-  
-  	const stylesExperiences = {
-  	  experienceItem: {
-  		marginBottom: '15px',
-  		borderBottom: '1px solid #ccc',
-  		padding: '10px 0',
-  		at: {
-  		  fontFamily: 'Arial',
-  		  fontSize: '0.8rem',
-  		  fontWeight: 'bold',
-  		},
-  		duration: {
-  		  text: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '1.0rem',
-            fontWeight: 'normal',
-  		  }
-  		},
-  		description: {
-  		  text: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '2.0rem',
-            fontWeight: 'normal',
-  		  }
-  		},
-  		companyActivity: {
-  		  title: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '0.8rem',
-            fontWeight: 'normal',
-  		  },
-  		  text: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '0.8rem',
-            fontWeight: 'bold',
-  		  }
-  		},
-  		country: {
-  		  title: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '1.0rem',
-            fontWeight: 'normal',
-  		  },
-  		  text: {
-  		    fontFamily: 'Arial',
-  		    fontSize: '1.0rem',
-            fontWeight: 'bold',
-  		  }
-  		}
-  	  }
-  	};
-  	
-  	
-  	
-  	
-  	
-  	const Education = () => {
-  	  const education = [
-  		{
-  		  degree: 'Entrepreneurship in Technology',
-  		  institution: 'Collège National de Science et Technologie',
-		  logo: 'images/logomarks/collegeNational.png',
-  		  year: '2022 - 2023',
-  		},
-  		{
-  		  degree: 'Software Development Technologist',
-  		  institution: 'UNESA [Brazil]',
-		  logo: 'images/logomarks/unesa.png',
-  		  year: '2002 - 2004',
-  		},
-  	  ];
-  
-  	  return (
-  		<section style={stylesEducationals.education}>
-  		  <h2>Education</h2>
-  		  <ul>
-  			{education.map((edu, index) => (
-  			  <li key={index}>
-				<img src={edu.logo} alt={edu.institution} style={stylesEducationals.logoIcon} />
-				<div>
-				  <p>{edu.degree}</p>
-				  <p>{edu.institution} ({edu.year})</p>
+</head>
+
+<body>
+	<div id="root"></div>
+</body>
+
+<script type="text/babel" data-type="module">
+	import React, { StrictMode } from 'react';
+	import { createRoot } from 'react-dom/client';
+
+	const HeadData = () => {
+		return (
+			<section className="headData">
+				<img src="images/sign.png" alt="Sign" className="signImage" />
+				<div className="headContact">
+					<p>alfgomes@outlook.com</p>
+					<p>(438) 465-9624</p>
+					<p id="locale"></p>
 				</div>
-				<hr/>
-  			  </li>
-  			))}
-  		  </ul>
-  		</section>
-  	  );
-  	};
-  
-  	const stylesEducationals = {
-  	  education: {
-  		backgroundColor: '#272727',
-  		padding: '20px',
-  		borderRadius: '8px',
-  		boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  		marginBottom: '20px',
-  	  },
-  	  logoIcon: {
-  		width: '40px',
-  		height: '40px',
-  		marginRight: '10px',
-  	  },
-  	};
-  	
-  	
-  	
-  	
-  	
-  	const Skills = () => {
-  	  const skills = [
-  		{ name: '.Net CORE (C#)', versions: '', image: 'images/skills/csharp.svg', link: '' },
-  		{ name: '.Net Framework (C# and VB.Net)', versions: '', image: 'images/skills/visual-studio.svg', link: '' },
-  		{ name: 'Analytic Problem Solving', versions: '', image: 'images/skills/problem-solving-ability.png', link: '' },
-  		{ name: 'Analytical Skills', versions: '', image: 'images/skills/analytical-skills.png', link: '' },
-  		{ name: 'AngularJS', versions: '', image: 'images/skills/angular.svg', link: '' },
-  		{ name: 'Application Programming Interfaces (API)', versions: '', image: 'images/skills/api.png', link: '' },
-  		{ name: 'Architectural Design', versions: '', image: 'images/skills/architectural-design.png', link: '' },
-  		{ name: 'ASP.NET', versions: '', image: 'images/skills/asp-net.png', link: '' },
-  		{ name: 'Business Intelligence (BI)', versions: '', image: 'images/skills/bi.png', link: '' },
-  		{ name: 'Cascading Style Sheets (CSS)', versions: '', image: 'images/skills/css.svg', link: '' },
-  		{ name: 'Confluence', versions: '', image: 'images/skills/confluence.jpg', link: '' },
-  		{ name: 'Creative Problem Solving', versions: '', image: 'images/skills/creative-problem-solving.png', link: '' },
-  		{ name: 'Crucible', versions: '', image: 'images/skills/crucible.svg', link: '' },
-  		{ name: 'Data Structures', versions: '', image: 'images/skills/data_structure.png', link: '' },
-  		{ name: 'Decision-Making', versions: '', image: 'images/skills/decision-making.webp', link: '' },
-  		{ name: 'Delphi', versions: '7', image: 'images/skills/delphi.png', link: '' },
-  		{ name: 'Design Patterns', versions: '', image: 'images/skills/design-patterns.png', link: '' },
-  		{ name: 'Domain-Driven Design (DDD)', versions: '', image: 'images/skills/ddd.jpg', link: '' },
-  		{ name: 'Enterprise Softwares', versions: '', image: 'images/skills/enterprise-softwares.png', link: '' },
-  		{ name: 'Entity Framework', versions: '4, 5, and 6', image: 'images/skills/ef.png', link: '' },
-  		{ name: 'Extract, Transform, Load (ETL)', versions: '', image: 'images/skills/etl.png', link: '' },
-  		{ name: 'Git', versions: '', image: 'images/skills/git.svg', link: '' },
-  		{ name: 'GitHub', versions: '', image: 'images/skills/github_light.svg', link: '' },
-  		{ name: 'Gitlab', versions: '', image: 'images/skills/gitlab.svg', link: '' },
-  		{ name: 'HTML 5', versions: '', image: 'images/skills/html5.svg', link: '' },
-  		{ name: 'Interbase', versions: '', image: 'images/skills/interbase.webp', link: '' },
-  		{ name: 'Intraweb', versions: '', image: 'images/skills/intraweb.png', link: '' },
-  		{ name: 'Java', versions: '6, 11', image: 'images/skills/java.svg', link: '' },
-  		{ name: 'JavaScript', versions: '', image: 'images/skills/javascript.svg', link: '' },
-  		{ name: 'JavaServer Pages (JSP)', versions: '', image: 'images/skills/jsp.png', link: '' },
-  		{ name: 'Jenkins', versions: '', image: 'images/skills/jenkins.png', link: '' },
-  		{ name: 'Jira', versions: '', image: 'images/skills/jira.webp', link: '' },
-  		{ name: 'JSON', versions: '', image: 'images/skills/json-schema.svg', link: '' },
-  		{ name: 'LINQ', versions: '', image: 'images/skills/linq.webp', link: '' },
-  		{ name: 'Maven', versions: '', image: 'images/skills/maven.jpg', link: '' },
-  		{ name: 'Ms Access', versions: '', image: 'images/skills/microsoft.svg', link: '' },
-  		{ name: 'Ms Project', versions: '', image: 'images/skills/microsoft.svg', link: '' },
-  		{ name: 'Mockito', versions: '', image: 'images/skills/mockito.png', link: '' },
-  		{ name: 'Model-View-Controller (MVC)', versions: '', image: 'images/skills/mvc.png', link: '' },
-  		{ name: 'MySQL', versions: '', image: 'images/skills/mysql.svg', link: '' },
-  		{ name: 'Node.js', versions: '', image: 'images/skills/nodejs.svg', link: '' },
-  		{ name: 'Oracle', versions: '', image: 'images/skills/oracle.png', link: '' },
-  		{ name: 'PHP', versions: '', image: 'images/skills/php.svg', link: '' },
-  		{ name: 'PL/SQL', versions: '', image: 'images/skills/oracle.png', link: '' },
-  		{ name: 'Problem Solving', versions: '', image: 'images/skills/problem-solving.png', link: '' },
-  		{ name: 'Quality Assurance', versions: '', image: 'images/skills/qa.png', link: '' },
-  		{ name: 'React', versions: '', image: 'images/skills/react.svg', link: '' },
-  		{ name: 'Scrum', versions: '', image: 'images/skills/scrum.png', link: '' },
-  		{ name: 'Servlets', versions: '', image: 'images/skills/java.svg', link: '' },
-  		{ name: 'Shell Script', versions: '', image: 'images/skills/terminal.png', link: '' },
-  		{ name: 'SonarQube', versions: '', image: 'images/skills/sonarqube.png', link: '' },
-  		{ name: 'Sourcetree', versions: '', image: 'images/skills/sourcetree.svg', link: '' },
-  		{ name: 'SQL DB2', versions: '', image: 'images/skills/db2.svg', link: '' },
-  		{ name: 'SQL Server', versions: '2000, 2005, 2008, 2012', image: 'images/skills/sql-server.svg', link: '' },
-  		{ name: 'Integration Services (SSIS)', versions: '', image: 'images/skills/sql-server.svg', link: '' },
-  		{ name: 'SQL Server Reporting Services (SSRS)', versions: '', image: 'images/skills/sql-server.svg', link: '' },
-  		{ name: 'Team Foundation Server (TFS)', versions: '', image: 'images/skills/microsoft.svg', link: '' },
-  		{ name: 'Test-Driven Development (TDD)', versions: '', image: 'images/skills/tdd.png', link: '' },
-  		{ name: 'TIBCO', versions: '', image: 'images/skills/tibco.png', link: '' },
-  		{ name: 'TIBCO Spotfire', versions: '', image: 'images/skills/tibco.png', link: '' },
-  		{ name: 'Procedures', versions: '', image: 'images/skills/stored-procedure.png', link: '' },
-  		{ name: 'Web API', versions: '', image: 'images/skills/api.png', link: '' },
-  		{ name: 'Web Applications', versions: '', image: 'images/skills/code.png', link: '' },
-  		{ name: 'Web Services', versions: '', image: 'images/skills/web-services.png', link: '' },
-  		{ name: 'Web Services API', versions: '', image: 'images/skills/api.png', link: '' },
-  		{ name: 'Window Forms', versions: '', image: 'images/skills/code.png', link: '' },
-  		{ name: 'Windows Presentation Foundation (WPF)', versions: '', image: 'images/skills/wpf.png', link: '' },
-  		{ name: 'Development', versions: '', image: 'images/skills/vscode.svg', link: '' },
-  		{ name: 'Write SQL Scripts', versions: '', image: 'images/skills/sql.png', link: '' },
-  		{ name: 'ZPL', versions: '', image: 'images/skills/zebra.webp', link: '' },
-  	  ];
-  
-  	  return (
-  		<section style={stylesSkills.skills}>
-  		  <h2>Skills</h2>
-  		  <ul style={stylesSkills.skillsList}>
-  			{skills.map((skill, index) => (
-  			  <li key={index} style={stylesSkills.skillItem}>
-  				<img src={skill.image} alt={skill.name} style={stylesSkills.skillIcon} />
-  				<span>{skill.name}</span>
-  			  </li>
-  			))}
-  		  </ul>
-  		</section>
-  	  );
-  	};
-  
-  	const stylesSkills = {
-  	  skills: {
-  		backgroundColor: '#272727',
-  		padding: '20px',
-  		borderRadius: '8px',
-  		boxShadow: '0 4px 8px rgba(151, 151, 151, 0.5)',
-  		marginBottom: '10px',
-  	  },
-  	  skillsList: {
-  		display: 'flex',
-  		flexWrap: 'wrap',
-  		padding: 0,
-  		listStyleType: 'none',
-  	  },
-  	  skillItem: {
-  		backgroundColor: '#2ab0ff',
-  		borderRadius: '5px',
-  		padding: '10px',
-  		margin: '5px',
-  		display: 'flex',
-  		alignItems: 'center',
-		cursor: 'alias',
-  	  },
-  	  skillIcon: {
-  		width: '30px',
-  		height: '30px',
-  		marginRight: '10px',
-  	  },
-  	};
-	
+			</section>
+		);
+	};
+
+	const AboutMe = () => {
+		return (
+			<section style={stylesAboutMe.section}>
+				<h2>Who is André?</h2>
+				<img src="images/photo.jpg" alt="Photo" style={stylesAboutMe.section.photoImage} />
+				<p>Software Developer with International Expertise</p>
+				<p>Since 2002, I have been working as a software developer, bringing a unique combination of experience and innovation to the market. Born in Brazil and also a Portuguese citizen, I am a self-taught entrepreneur with an insatiable passion for technology.</p>
+				<p>With a certification from the Collège National de Science et Technologie University, I have hands-on experience in several programming languages. My approach is focused on efficient problem-solving and creating clean, functional code, ensuring technological solutions that meet the needs of my clients.</p>
+			</section>
+		);
+	};
+
+	const stylesAboutMe = {
+		section: {
+			backgroundColor: '#272727',
+			color: '#ffffff',
+			padding: '20px',
+			borderRadius: '8px',
+			marginBottom: '10px',
+			photoImage: {
+				borderRadius: '50%',
+				width: '120px',
+				height: '120px',
+				marginRight: '30px',
+				marginBottom: '15px',
+				border: '1px solid #4a4e69',
+				float: 'left',
+			},
+			text: {
+				marginTop: '0px',
+				marginBottom: '0px',
+				padding: 0,
+			},
+		},
+	};
+
+
+
+
+
+	const Experience = () => {
+		const experiences = [
+			{
+				title: 'Senior Software Engineer',
+				company: 'Intrum Portugal',
+				localization: 'Lisbon',
+				country: 'Portugal',
+				duration: 'Sep 2020 – Jul 2022',
+				description: 'Lead developer of new projects. I developed the web system for integrations between different payment methods using Web APIs and WebServices from different financial institutions to implement secure payment routines.',
+				company_activity: 'Debt Collection Company',
+			},
+			{
+				title: 'Software Engineer',
+				company: 'Thales Edisoft Portugal',
+				localization: 'Lisbon',
+				country: 'Portugal',
+				duration: 'Mar 2020 – Sep 2020',
+				description: 'Development and maintenance of various tools and components within the project of the monitoring and control system for aircraft positioned on the ground and aircraft approaching for landing and take-off, as well as the roll to the runway, from back-end (Java) to front-end end (.NET). Write requirements and tests, and develop solutions. Refactoring older components to optimize performance and implement modern standards and patterns and migrating code from Java 6 to Java 11.',
+				company_activity: 'Air Control and Defense System',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'Altice Portugal',
+				localization: 'Lisbon',
+				country: 'Portugal',
+				duration: 'Sep 2019 – Mar 2020',
+				description: 'Corrective and preventive maintenance, and development of small features in the SFA (Sales Force Automation) application, which manages product sales in the physical store and call center channels.',
+				company_activity: 'Telecommunications',
+			},
+			{
+				title: 'Autonomous Software Engineer',
+				company: 'Bee Engineering',
+				localization: 'Lisbon',
+				country: 'Portugal',
+				duration: 'Oct 2016 – Nov 2019',
+				description: '- When I was assigned to Banco BPI, I was part of the BI team, where I developed ETLs with information about the KPIs defined for display on screens spread throughout the building\'s floors.\\n\\r- During my time at the company\'s office, I implemented corrections and new features for internal projects. I also worked as Team Leader on some internal projects. In addition to giving classes on .Net CORE, Entity Framework and MVC technology to new members.\\n\\r- When I worked on the Vodafone project, I refactored the online package sales system together with the team.',
+				company_activity: 'IT Consulting',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'CTT - Correios de Portugal',
+				localization: 'Lisbon',
+				country: 'Portugal',
+				duration: 'Jul 2016 – Oct 2016',
+				description: 'I worked with corrective development of the EDM system (Electronic Document Management).',
+				company_activity: 'Post Company',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'Techint Engineering & Construction',
+				localization: 'São Paulo, Rio de Janeiro, Paraná',
+				country: 'Brazil',
+				duration: 'Feb 2013 – Mar 2016',
+				description: 'I worked on the Systems Engineering team, participating in some projects such as: OSX, Comperj and CTTP76 (Petroleum Platform of Petrobrás). Idealized, developed and implemented the WareHousePlus system (warehouse management). I was responsible for implementing the Electronic RIR system and deploying it in all works and maintaining its operation. Developed and implemented the Absenteeism Control Dashboard at the CTTP76 site using SQL Server as datawarehouse and creation of ETLs and TIBCO Spotfire to generate graphs and dynamic reports.',
+				company_activity: 'Engineering and Construction',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'D-Click Web & Mobile Solutions',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Apr 2012 – Feb 2013',
+				description: 'I worked for the client Techint Engineering & Construction (an outsourcing basis) developing a WPF system for integration between the SmartPlantMaterials system, SAP and EPCPlan (the client\'s own system).',
+				company_activity: 'IT Consulting',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'ECO Sistemas',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Feb 2012 – Apr 2012',
+				description: 'I worked at this company on an outsourcing basis for the State Health Department, developing applications for emergency health care units and for the fire department.',
+				company_activity: 'IT Consulting',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'Prodata Mobility Brasil',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Oct 2011 – Feb 2012',
+				description: 'I worked on applications that recorded values (binary data) on electronic transport tickets.\\n\\rWe used Delphi 7 to implement the card reading/writing system that would be used in bus validators and .Net to develop the reporting system.',
+				company_activity: 'Transportation Ticket System',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'Modal Bank',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Mar 2011 – Oct 2011',
+				description: 'I integrated a team along with 9 other people responsible for the development of the Internet Banking portal for the bank\'s customers.\\n\\rWe used a suite of visual components developed exclusively for the bank, which made page development faster, but less intuitive. The development was based on SCRUM methodology and we had a development approach based on TDD.',
+				company_activity: 'Bank',
+			},
+			{
+				title: 'Software Development Team Lead',
+				company: 'Mongeral Aegon Insurance and Pensions',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Sep 2007 – Mar 2011',
+				description: 'I joined the company to lead the team of developers of the ERP Commissioning module that was being developed specifically to manage the company\'s insurance, pension and credit products and I was the technical responsible for this team to design and implement the system\'s core module, and integration for all other ERP modules through the use of APIs.\\n\\rWe used NHibernate as ORM, and the development was based on the SCRUM methodology and we had a development approach based on DDD and TDD.',
+				company_activity: 'Insurance',
+			},
+			{
+				title: 'Senior Fullstack Developer',
+				company: 'TEMA Systems',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Jan 2007 – Jul 2007',
+				description: 'I worked at the company in a team that developed solutions to optimize customer\'s financial resources.',
+				company_activity: 'IT Consulting, Specialized for banks',
+			},
+			{
+				title: 'Fullstack Developer',
+				company: 'Secretaria da Fazenda',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Dec 2004 – Jan 2007',
+				description: 'I was assigned to take care of the applications for filling taxable information (GIA and DECLAN) developed in Delphi 7 that were sent to taxpayers (companies) so that they could make their tax returns to the State.\\n\\rI was also responsible for maintaining an application developed in Java within the SEFAZ portal where taxpayers could consult the status of the statements sent.',
+				company_activity: 'Public Administration of Government Finance Management',
+			},
+			{
+				title: 'Fullstack Developer',
+				company: 'Tribunal de Contas do Estado',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Aug 2003 – Dec 2004',
+				description: 'I was part of the development team for the SIGFIS system, which was a management system for monitoring public expenditures in municipalities.',
+				company_activity: 'Public Administration of Government Finance Management',
+			},
+			{
+				title: 'Team Leader ⇒ Developer',
+				company: 'Lojas Americanas Distribution Center',
+				localization: 'Rio de Janeiro',
+				country: 'Brazil',
+				duration: 'Sep 2000 - Jul 2003',
+				description: 'Starting at the company as an Administrative Assistant, I was soon promoted to team supervisor, so as a supervisor I developed small applications with the aim of optimizing my time as a manager and the visibility of these applications gave me the opportunity to start a project to implement larger applications in the unit. and with that I developed a communication portal on the intranet, transformed several existing paper forms into electronic forms and developed an application to generate new optimized picking labels, taking advantage of all the space on the labels including all the necessary information (which were previously written by hand ), reducing costs and increasing the productivity of all CD teams.',
+				company_activity: 'Logistics, Transport and Warehousing',
+			},
+		];
+
+		return (
+			<section style={stylesExperiences.section}>
+				<article>
+					<h2>Experiences</h2>
+					<ul>
+						{experiences.map((exp, index) => (
+							<li key={index} style={stylesExperiences.section.item}>
+								<details>
+									<summary>
+										<span style={stylesExperiences.section.item.title}>{exp.title} <span style={stylesExperiences.section.item.title.at}>at</span> {exp.company}</span>
+										<span style={stylesExperiences.section.item.duration}><strong>{exp.duration}</strong></span>
+									</summary>
+									<p style={stylesExperiences.section.item.description}>{exp.description}</p>
+									<p><span style={stylesExperiences.section.item.localization.title}>Localization:</span> <span style={stylesExperiences.section.item.localization.text}>{exp.localization} ({exp.country})</span></p>
+									<p><span style={stylesExperiences.section.item.companyActivity.title}>Company Activity:</span> <span style={stylesExperiences.section.item.companyActivity.text}>{exp.company_activity}</span></p>
+								</details>
+							</li>
+						))}
+					</ul>
+				</article>
+			</section>
+		);
+	};
+
+	const OccasionalExperience = () => {
+		const occasionalExperiences = [
+			{
+				title: 'Painter Labour',
+				company: 'Notari Daniel Renovations',
+				localization: 'Dieppe-NB',
+				country: 'Canada',
+				duration: 'May 2024 – Aug 2024',
+				description: 'During my time at the company, I performed the tasks: Treatment and sanding of Walls and Ceilings, and treatment and sanding of Doors, Trim and Baseboard, and finishing painting on Baseboards and Walls o  		  Newly Constructed Homes',
+				company_activity: 'Construction',
+			},
+			{
+				title: 'Construction Operator',
+				company: 'Silver Oak Construction and Renovation',
+				localization: 'Moncton-NB',
+				country: 'Canada',
+				duration: 'Jan 2024 – May 2024',
+				description: 'During my time at the company, I performed the tasks: Painting walls and ceilings of houses, Installation of luminaires and sockets, Installation of subfloors, Framing job and Installation of Insulation, Installation of Vinyl floors',
+				company_activity: 'Construction & Renovation',
+			},
+		];
+
+		return (
+			<section style={stylesExperiences.section}>
+				<article>
+					<h2>Occasional Experiences</h2>
+					<ul>
+						{occasionalExperiences.map((exp, index) => (
+							<li key={index} style={stylesExperiences.section.item}>
+								<details>
+									<summary>
+										<span style={stylesExperiences.section.item.title}>{exp.title} <span style={stylesExperiences.section.item.title.at}>at</span> {exp.company}</span>
+										<span style={stylesExperiences.section.item.duration}><strong>{exp.duration}</strong></span>
+									</summary>
+									<p style={stylesExperiences.section.item.description}>{exp.description}</p>
+									<p><span style={stylesExperiences.section.item.localization.title}>Localization:</span> <span style={stylesExperiences.section.item.localization.text}>{exp.localization} ({exp.country})</span></p>
+									<p><span style={stylesExperiences.section.item.companyActivity.title}>Company Activity:</span> <span style={stylesExperiences.section.item.companyActivity.text}>{exp.company_activity}</span></p>
+								</details>
+							</li>
+						))}
+					</ul>
+				</article>
+			</section>
+		);
+	};
+
+	const stylesExperiences = {
+		section: {
+			backgroundColor: '#272727',
+			item: {
+				marginBottom: '15px',
+				borderBottom: '1px solid #ccc',
+				padding: '10px 0',
+				title: {
+					fontFamily: 'Arial',
+					fontSize: '1.2rem',
+					fontWeight: 'bold',
+					textShadow: '2px 2px 0 rgba(90, 90, 90, 1.0)',
+					at: {
+						fontFamily: 'Arial',
+						fontSize: '0.8rem',
+						fontWeight: 'bold',
+					},
+				},
+				duration: {
+					fontFamily: 'Arial',
+					fontSize: '1.2rem',
+					fontWeight: 'bold',
+					textShadow: '2px 2px 0 rgba(90, 90, 90, 1.0)',
+				},
+				description: {
+					fontFamily: 'Arial',
+					fontSize: '1.0rem',
+					fontWeight: 'normal',
+				},
+				localization: {
+					title: {
+						fontFamily: 'Arial',
+						fontSize: '0.7rem',
+						fontWeight: 'normal',
+					},
+					text: {
+						fontFamily: 'Arial',
+						fontSize: '0.8rem',
+						fontWeight: 'bold',
+					}
+				},
+				companyActivity: {
+					title: {
+						fontFamily: 'Arial',
+						fontSize: '0.7rem',
+						fontWeight: 'normal',
+					},
+					text: {
+						fontFamily: 'Arial',
+						fontSize: '0.8rem',
+						fontWeight: 'bold',
+					}
+				},
+			}
+		},
+	};
+
+
+
+
+
+	const Education = () => {
+		const education = [
+			{
+				type: 'College',
+				degree: 'Entrepreneurship in Technology',
+				institution: 'Collège National de Science et Technologie',
+				logo: 'images/logomarks/collegeNational.png',
+				year: '2022 - 2023',
+				description: 'Technology entrepreneurs work all over the world and in a variety of contexts: telecommuting, outsourcing tasks, opening an office at a specific location in the world, assisting with job executions, etc.',
+			},
+			{
+				type: 'University',
+				degree: 'Software Development Technologist',
+				institution: 'UNESA [Brazil]',
+				logo: 'images/logomarks/unesa.png',
+				year: '2002 - 2004',
+				description: 'Technical course focused on the software development market.',
+			},
+		];
+
+		return (
+			<section style={stylesEducationals.section}>
+				<h2>Education</h2>
+				<ul>
+					{education.map((edu, index) => (
+						<li key={index}>
+							<div class="educationContainer">
+								<img src={edu.logo} alt={edu.institution} style={stylesEducationals.section.item.logoIcon} />
+								<div>
+									<p style={stylesEducationals.section.item.type}>{edu.type} ({edu.year})</p>
+									<p style={stylesEducationals.section.item.institution}>{edu.institution}</p>
+								</div>
+							</div>
+							<p style={stylesEducationals.section.item.degree}>• {edu.degree} •</p>
+							<p style={stylesEducationals.section.item.description}>{edu.description}</p>
+							<hr />
+						</li>
+					))}
+				</ul>
+			</section>
+		);
+	};
+
+	const stylesEducationals = {
+		section: {
+			backgroundColor: '#272727',
+			padding: '20px',
+			borderRadius: '8px',
+			marginBottom: '20px',
+			item: {
+				logoIcon: {
+					width: '90px',
+					height: '90px',
+					marginRight: '10px',
+					display: 'inline-block',
+					boxShadow: '4px 4px 4px rgba(127, 127, 127, 1)',
+				},
+				type: {
+					fontFamily: 'Arial',
+					fontSize: '1.4rem',
+					fontWeight: 'bold',
+					marginBottom: '0px',
+					textShadow: '2px 2px 4px rgba(200, 200, 200, 1.0)',
+				},
+				institution: {
+					fontFamily: 'Arial',
+					fontSize: '1.2rem',
+					fontWeight: 'bold',
+					marginBottom: '0px',
+					textShadow: '2px 2px 4px rgba(200, 200, 200, 1.0)',
+				},
+				degree: {
+					fontFamily: 'Arial',
+					fontSize: '1.0rem',
+					fontWeight: 'normal',
+					marginBottom: '0px',
+					marginLeft: '100px',
+					color: 'rgba(200, 200, 200, 1.0)',
+				},
+				description: {
+					fontFamily: 'Arial',
+					fontSize: '0.9rem',
+					fontWeight: 'normal',
+					marginBottom: '0px',
+					marginLeft: '100px',
+					color: 'rgba(200, 200, 200, 1.0)',
+				},
+			},
+		},
+	};
+
+
+
+
+
+	const Projects = () => {
+		const projects = [
+			{ name: 'Integrated Payment Portal', company: 'Intrum Portugal', year: '2022', versions: '', image: 'images/companies/intrum.png', link: 'https://pay.intrum.pt/Gateway/Pay_MBWay/61e5c89693ead' },
+			{ name: 'Airport Tower Management Software', company: 'Thales Portugal', year: '2020', versions: '', image: 'images/companies/thales.jpg', link: 'https://onboard.thalesgroup.com/building-the-future-of-atm-together/' },
+			{ name: 'BI DSI', company: 'BPI Bank', year: '2017', versions: '', image: 'images/companies/bpi.jpg', link: '' },
+			{ name: 'New Budget', company: 'BPI Bank', year: '2015', versions: '', image: 'images/companies/bpi.jpg', link: '' },
+			{ name: 'Simulator for Housing Credit', company: 'CTT Bank', year: '2016', versions: '', image: 'images/companies/ctt-bank.png', link: 'https://simuladorch.bancoctt.pt/' },
+			{ name: 'SSIS - SmartPlant Materials & SAP Integration System', company: 'Techint Engineering & Construction', year: '2014', versions: '', image: 'images/companies/techint.png', link: '' },
+			{ name: 'Warehouse Plus - Warehouse Optimization System', company: 'Techint Engineering & Construction', year: '2013', versions: '', image: 'images/companies/techint.png', link: '' },
+			{ name: 'e-RIR (Inspection and Receipt Electronic Report)', company: 'Techint Engineering & Construction', year: '2012', versions: '', image: 'images/companies/techint.png', link: '' },
+			{ name: 'e-Label LASA', company: 'Lojas Americanas', year: '2002', versions: '', image: 'images/companies/lasa.png', link: '' },
+		];
+
+		return (
+			<section style={stylesProjects.section}>
+				<h2>Projects</h2>
+				<ul>
+					{projects.map((project, index) => (
+						<a href={project.link} style={stylesProjects.section.list.item.a}>
+							<div style={stylesProjects.section.list}>
+								<li key={index} style={stylesProjects.section.list.item}>
+									<img src={project.image} alt={project.name} style={stylesProjects.section.list.item.icon} />
+									<p style={stylesProjects.section.list.item.title}>{project.name}</p>
+									<p style={stylesProjects.section.list.item.year}>{project.year}</p>
+								</li>
+							</div>
+						</a>
+					))}
+				</ul>
+			</section>
+		);
+	};
+
+	const stylesProjects = {
+		section: {
+			backgroundColor: '#272727',
+			padding: '20px',
+			borderRadius: '8px',
+			marginBottom: '10px',
+			list: {
+				display: 'flex',
+				flexWrap: 'wrap',
+				padding: 0,
+				listStyleType: 'none',
+				item: {
+					backgroundColor: '#2ab0ff',
+					borderRadius: '5px',
+					padding: '10px',
+					margin: '5px',
+					display: 'flex',
+					alignItems: 'center',
+					boxShadow: '4px 4px 4px rgba(127, 127, 127, 1)',
+					minHeight: '40px',
+					minWidth: '600px',
+					boxSizing: 'border-box',
+					title: {
+						fontFamily: 'Arial',
+						fontSize: '1.0em',
+						fontWeight: 'bold',
+						textShadow: '2px 2px 0 rgba(90, 90, 90, 1.0)',
+						minWidth: '510px',
+					},
+					year: {
+						fontFamily: 'Arial',
+						fontSize: '1.0rem',
+						fontWeight: 'bold',
+						textShadow: '2px 2px 0 rgba(90, 90, 90, 1.0)',
+						float: 'right',
+						textAlign: 'right',
+						marginRight: '0px',
+					},
+					icon: {
+						backgroundColor: '#FFFFFF',
+						width: '40px',
+						height: '40px',
+						marginRight: '10px',
+						boxShadow: '2px 2px 2px rgba(0, 0, 0, 0.2)',
+					},
+					a: {
+						color: '#ffffff',
+						textDecoration: 'none',
+						cursor: 'pointer',
+					},
+				},
+			},
+		},
+	};
+
+
+
+
+
+
+
+
+	const Skills = () => {
+		const skills = [
+			{ name: '.Net CORE (C#)', versions: '', image: 'images/skills/csharp.svg', link: '' },
+			{ name: '.Net Framework (C# and VB.Net)', versions: '', image: 'images/skills/visual-studio.svg', link: '' },
+			{ name: 'Analytic Problem Solving', versions: '', image: 'images/skills/problem-solving-ability.png', link: '' },
+			{ name: 'Analytical Skills', versions: '', image: 'images/skills/analytical-skills.png', link: '' },
+			{ name: 'AngularJS', versions: '', image: 'images/skills/angular.svg', link: '' },
+			{ name: 'Application Programming Interfaces (API)', versions: '', image: 'images/skills/api.png', link: '' },
+			{ name: 'Architectural Design', versions: '', image: 'images/skills/architectural-design.png', link: '' },
+			{ name: 'ASP.NET', versions: '', image: 'images/skills/asp-net.png', link: '' },
+			{ name: 'Business Intelligence (BI)', versions: '', image: 'images/skills/bi.png', link: '' },
+			{ name: 'Cascading Style Sheets (CSS)', versions: '', image: 'images/skills/css.svg', link: '' },
+			{ name: 'Confluence', versions: '', image: 'images/skills/confluence.jpg', link: '' },
+			{ name: 'Creative Problem Solving', versions: '', image: 'images/skills/creative-problem-solving.png', link: '' },
+			{ name: 'Crucible', versions: '', image: 'images/skills/crucible.svg', link: '' },
+			{ name: 'Data Structures', versions: '', image: 'images/skills/data_structure.png', link: '' },
+			{ name: 'Decision-Making', versions: '', image: 'images/skills/decision-making.webp', link: '' },
+			{ name: 'Delphi', versions: '7', image: 'images/skills/delphi.png', link: '' },
+			{ name: 'Design Patterns', versions: '', image: 'images/skills/design-patterns.png', link: '' },
+			{ name: 'Domain-Driven Design (DDD)', versions: '', image: 'images/skills/ddd.jpg', link: '' },
+			{ name: 'Enterprise Softwares', versions: '', image: 'images/skills/enterprise-softwares.png', link: '' },
+			{ name: 'Entity Framework', versions: '4, 5, and 6', image: 'images/skills/ef.png', link: '' },
+			{ name: 'Extract, Transform, Load (ETL)', versions: '', image: 'images/skills/etl.png', link: '' },
+			{ name: 'Git', versions: '', image: 'images/skills/git.svg', link: '' },
+			{ name: 'GitHub', versions: '', image: 'images/skills/github_light.svg', link: '' },
+			{ name: 'Gitlab', versions: '', image: 'images/skills/gitlab.svg', link: '' },
+			{ name: 'HTML 5', versions: '', image: 'images/skills/html5.svg', link: '' },
+			{ name: 'Interbase', versions: '', image: 'images/skills/interbase.webp', link: '' },
+			{ name: 'Intraweb', versions: '', image: 'images/skills/intraweb.png', link: '' },
+			{ name: 'Java', versions: '6, 11', image: 'images/skills/java.svg', link: '' },
+			{ name: 'JavaScript', versions: '', image: 'images/skills/javascript.svg', link: '' },
+			{ name: 'JavaServer Pages (JSP)', versions: '', image: 'images/skills/jsp.png', link: '' },
+			{ name: 'Jenkins', versions: '', image: 'images/skills/jenkins.png', link: '' },
+			{ name: 'Jira', versions: '', image: 'images/skills/jira.webp', link: '' },
+			{ name: 'JSON', versions: '', image: 'images/skills/json-schema.svg', link: '' },
+			{ name: 'LINQ', versions: '', image: 'images/skills/linq.webp', link: '' },
+			{ name: 'Maven', versions: '', image: 'images/skills/maven.jpg', link: '' },
+			{ name: 'Ms Access', versions: '', image: 'images/skills/microsoft.svg', link: '' },
+			{ name: 'Ms Project', versions: '', image: 'images/skills/microsoft.svg', link: '' },
+			{ name: 'Mockito', versions: '', image: 'images/skills/mockito.png', link: '' },
+			{ name: 'Model-View-Controller (MVC)', versions: '', image: 'images/skills/mvc.png', link: '' },
+			{ name: 'MySQL', versions: '', image: 'images/skills/mysql.svg', link: '' },
+			{ name: 'Node.js', versions: '', image: 'images/skills/nodejs.svg', link: '' },
+			{ name: 'Oracle', versions: '', image: 'images/skills/oracle.png', link: '' },
+			{ name: 'PHP', versions: '', image: 'images/skills/php.svg', link: '' },
+			{ name: 'PL/SQL', versions: '', image: 'images/skills/oracle.png', link: '' },
+			{ name: 'Problem Solving', versions: '', image: 'images/skills/problem-solving.png', link: '' },
+			{ name: 'Quality Assurance', versions: '', image: 'images/skills/qa.png', link: '' },
+			{ name: 'React', versions: '', image: 'images/skills/react.svg', link: '' },
+			{ name: 'Scrum', versions: '', image: 'images/skills/scrum.png', link: '' },
+			{ name: 'Servlets', versions: '', image: 'images/skills/java.svg', link: '' },
+			{ name: 'Shell Script', versions: '', image: 'images/skills/terminal.png', link: '' },
+			{ name: 'SonarQube', versions: '', image: 'images/skills/sonarqube.png', link: '' },
+			{ name: 'Sourcetree', versions: '', image: 'images/skills/sourcetree.svg', link: '' },
+			{ name: 'SQL DB2', versions: '', image: 'images/skills/db2.svg', link: '' },
+			{ name: 'SQL Server', versions: '2000, 2005, 2008, 2012', image: 'images/skills/sql-server.svg', link: '' },
+			{ name: 'Integration Services (SSIS)', versions: '', image: 'images/skills/sql-server.svg', link: '' },
+			{ name: 'SQL Server Reporting Services (SSRS)', versions: '', image: 'images/skills/sql-server.svg', link: '' },
+			{ name: 'Team Foundation Server (TFS)', versions: '', image: 'images/skills/microsoft.svg', link: '' },
+			{ name: 'Test-Driven Development (TDD)', versions: '', image: 'images/skills/tdd.png', link: '' },
+			{ name: 'TIBCO', versions: '', image: 'images/skills/tibco.png', link: '' },
+			{ name: 'TIBCO Spotfire', versions: '', image: 'images/skills/tibco.png', link: '' },
+			{ name: 'Procedures', versions: '', image: 'images/skills/stored-procedure.png', link: '' },
+			{ name: 'Web API', versions: '', image: 'images/skills/api.png', link: '' },
+			{ name: 'Web Applications', versions: '', image: 'images/skills/code.png', link: '' },
+			{ name: 'Web Services', versions: '', image: 'images/skills/web-services.png', link: '' },
+			{ name: 'Web Services API', versions: '', image: 'images/skills/api.png', link: '' },
+			{ name: 'Window Forms', versions: '', image: 'images/skills/code.png', link: '' },
+			{ name: 'Windows Presentation Foundation (WPF)', versions: '', image: 'images/skills/wpf.png', link: '' },
+			{ name: 'Development', versions: '', image: 'images/skills/vscode.svg', link: '' },
+			{ name: 'Write SQL Scripts', versions: '', image: 'images/skills/sql.png', link: '' },
+			{ name: 'ZPL', versions: '', image: 'images/skills/zebra.webp', link: '' },
+		];
+
+		return (
+			<section style={stylesSkills.section}>
+				<h2>Skills</h2>
+				<ul style={stylesSkills.section.list}>
+					{skills.map((skill, index) => (
+						<li key={index} style={stylesSkills.section.list.item}>
+							<img src={skill.image} alt={skill.name} style={stylesSkills.section.list.item.icon} />
+							<span style={stylesSkills.section.list.item.title}>{skill.name}</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		);
+	};
+
+	const stylesSkills = {
+		section: {
+			backgroundColor: '#272727',
+			padding: '20px',
+			borderRadius: '8px',
+			marginBottom: '10px',
+			list: {
+				display: 'flex',
+				flexWrap: 'wrap',
+				padding: 0,
+				listStyleType: 'none',
+				item: {
+					backgroundColor: '#2ab0ff',
+					borderRadius: '5px',
+					padding: '10px',
+					margin: '5px',
+					display: 'flex',
+					alignItems: 'center',
+					cursor: 'alias',
+					boxShadow: '4px 4px 4px rgba(127, 127, 127, 1)',
+					title: {
+						fontFamily: 'Arial',
+						fontSize: '1.0em',
+						fontWeight: 'bold',
+						textShadow: '2px 2px 0 rgba(90, 90, 90, 1.0)',
+					},
+					icon: {
+						width: '15px',
+						height: '15px',
+						marginRight: '10px',
+						boxShadow: '2px 2px 2px rgba(0, 0, 0, 0.2)',
+					},
+				},
+			},
+		},
+	};
+
+
+
+
+
 	const FooterData = () => {
-  	  return (
-  		<section className="footerData">
-  		  <img src="images/profile.png" alt="Profile" className="profileImage" />
-  		  <p>alfgomes@outlook.com</p>
-  		</section>
-  	  );
-  	};
-  	
-  	
-  	
-  	
-  	
-  	const Resume = () => {
-  	  return (
-  		<div style={stylesResume.container}>
-  		  <HeadData />
-  		  <AboutMe />
-		  <Experience />
-  		  <OccasionalExperience />
-  		  <Education />
-  		  <Skills />
-  		</div>
-  	  );
-  	};
-  
-  	const stylesResume = {
-  	  container: {
-  		maxWidth: '98%',
-  		margin: '0 auto',
-  		padding: '20px',
-  		fontFamily: 'Arial',
-  		backgroundColor: '#f5f5f5',
-  		borderRadius: '10px',
-  		boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
-  	  },
-  	  header: {
-  		textAlign: 'center',
-  		color: '#2c3e50',
-  		marginBottom: '30px',
-  	  },
-  	};
-  	
-  	let App = () => {
-  	  return (
-  		<div className="App">
-  		  <Resume />
-	      <center>
-		    <FooterData />
-	      </center>
-  		</div>
-  	  );
-  	};
-  	
-  	const root = createRoot(document.getElementById('root'));
-  	root.render(
-  	  <StrictMode>
-  		<App />
-  	  </StrictMode>
-  	);
-  </script>
-  
-  <style>
-  	body {
-  		background-color: #272727;
-  		color: #ffffff;
-  		font-family: 'Arial';
-  		margin: 0;
-  		padding: 0;
-  	}
-  
-  	.App {
-  		max-width: 85%;
-  		margin: 0 auto;
-  		padding: 20px;
-  		background-color: #ffffff; /* White background for the resume */
-  		border-radius: 10px;
-  		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  	}
-  
-  	h1 {
-  		text-align: center;
-  		color: #4a4e69; /* Dark pastel color */
-  		font-size: 2.5rem;
-  		margin-bottom: 20px;
-  	}
-  
-  	h2 {
-  		color: #2ab0ff; /* Light pastel blue */
-  		border-bottom: 2px solid #2ab0ff;
-  		padding-bottom: 5px;
-  		margin-bottom: 15px;
-  	}
-  
-  	section {
-  		margin-bottom: 30px;
-  		padding: 20px;
-  		border-radius: 8px;
-  		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  	}
-	
-	.headData {
-  		background-color: #ffffff;
-		color: #000000;
-  		height: 120px;
-  		max-height: 120px;
-  	}
-	
-	.footerData {
-  		background-color: #ffffff;
-		color: #000000;
-  	}
-  
-  	.aboutMe {
-  		background-color: #272727;
-  	}
-  
-  	.experience {
-  		background-color: #272727;
-  	}
-  
-  	.occasionalExperience {
-  		background-color: #272727;
-  	}
-  
-  	.education {
-  		background-color: #272727;
-  	}
-  
-  	.skills {
-  		background-color: #272727;
-  	}
-  
-  	ul {
-  		list-style-type: none;
-  		padding: 0;
-  	}
-  
-  	li {
-  		margin-bottom: 10px;
-  	}
-	
-	.experienceTitle {
-  	  font-family: 'Arial';
-  	  font-size: '0.8rem';
-  	  font-weight: bold;
-	}
-  
-  	.profileImage {
-  		background-color: #000000;
-  		width: 120px;
-  		height: 120px;
-  		border-radius: 50%;
-  		margin-bottom: 15px;
-  		border: 3px solid #4a4e69;
-  	}
-	
-	.signImage {
-  		background-color: #ffffff;
-  		width: 20%;
-  		height: 100%;
-  		margin-bottom: 15px;
-		position: relative;
-		float: left;
-  	}
-	
-	.headContact {
-  		background-color: #ffffff;
-		position: relative;
-		float: right;
-  	}
-	
-	.photoImage {
-  		background-color: #000000;
-  		width: 120px;
-  		height: 120px;
-  		border-radius: 50%;
-  		margin-bottom: 15px;
-  		border: 3px solid #4a4e69;
-		position: relative;
-		float: left;
-		margin-right: 30px;
-  	}
-	
-	
-	
-	
-	details {
-	  background-color: #2196F3;
-	  color: white;
-	  padding: 10px;
-	  border-radius: 10px;
-	  transition: 0.2s background linear;
-	}
-	
-	details + details {
-	  margin-top: 20px;
-	}
-	
-	details:hover {
-	  background: #242424;
-	  color: #2196F3;
-	}
-	
-	details:hover > summary {
-	  color: #2196F3;
-	  text-indent: 5px;
+		return (
+			<div style={stylesFooter.section}>
+				<img style={stylesFooter.section.profileImg} src="images/profile.png" alt="Profile" />
+				<div>
+					<p style={stylesFooter.section.text}>© 2024 Andre Gomes</p>
+					<p style={stylesFooter.section.text}>alfgomes@outlook.com</p>
+				</div>
+			</div>
+		);
+	};
+
+	const stylesFooter = {
+		section: {
+			backgroundColor: '#ffffff',
+			color: '#000000',
+			padding: '20px',
+			borderRadius: '8px',
+			marginTop: '10px',
+			profileImg: {
+				backgroundColor: '#000000',
+				borderRadius: '50%',
+				width: '120px',
+				height: '120px',
+				marginTop: '10px',
+				marginBottom: '15px',
+				border: '1px solid #4a4e69',
+			},
+			text: {
+				marginTop: '0px',
+				marginBottom: '5px',
+				padding: 0,
+			},
+		},
+	};
+
+
+
+
+	const Resume = () => {
+		return (
+			<div style={stylesResume.container}>
+				<HeadData />
+				<AboutMe />
+				<Experience />
+				<OccasionalExperience />
+				<Education />
+				<Projects />
+				<Skills />
+			</div>
+		);
+	};
+
+	const stylesResume = {
+		container: {
+			maxWidth: '98%',
+			margin: '0 auto',
+			padding: '20px',
+			fontFamily: 'Arial',
+			backgroundColor: '#f5f5f5',
+			borderRadius: '10px',
+			boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+		},
+		header: {
+			textAlign: 'center',
+			color: '#2c3e50',
+			marginBottom: '30px',
+		},
+	};
+
+	let App = () => {
+		return (
+			<div className="App">
+				<Resume />
+				<center>
+					<FooterData />
+				</center>
+			</div>
+		);
+	};
+
+	const root = createRoot(document.getElementById('root'));
+	root.render(
+		<StrictMode>
+			<App />
+		</StrictMode>
+	);
+</script>
+
+<style>
+	body {
+		background-color: #272727;
+		color: #ffffff;
+		font-family: 'Arial';
+		margin: 0;
+		padding: 0;
 	}
 
-	details > summary {
-	  transition: color 1s;
+	.App {
+		max-width: 85%;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: rgb(176, 176, 176);
+		/* White background for the resume */
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	h1 {
+		text-align: center;
+		color: #4a4e69;
+		/* Dark pastel color */
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px 0 rgba(90, 90, 90, 1.0);
+	}
+
+	h2 {
+		color: #2ab0ff;
+		/* Light pastel blue */
+		border-bottom: 2px solid #2ab0ff;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		text-shadow: 2px 2px 0 rgba(90, 90, 90, 1.0);
+	}
+
+	section {
+		margin-bottom: 30px;
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 10px 10px 10px rgba(90, 90, 90, 0.8);
+	}
+
+	.headData {
+		background-color: #ffffff;
+		color: #000000;
+		height: 120px;
+		min-height: 120px;
+		max-height: 120px;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	.signImage {
+		background-color: #ffffff;
+		width: 200pt;
+		height: 90pt;
+		margin-bottom: 15px;
+		position: relative;
+		float: left;
+	}
+
+	.headContact {
+		float: right;
+		text-align: right;
+	}
+
+
+
+
+	details {
+		background-color: #2196F3;
+		color: white;
+		padding: 10px;
+		border-radius: 10px;
+		transition: 0.2s background linear;
+	}
+
+	details+details {
+		margin-top: 20px;
+	}
+
+	details:hover {
+		background: #242424;
+		color: #2196F3;
+	}
+
+	details:hover>summary {
+		color: #2196F3;
+		text-indent: 5px;
+	}
+
+	details>summary {
+		transition: color 1s;
 	}
 
 	details:not([open]) {
-      list-style-type: '> ';
+		list-style-type: '> ';
 	}
 
-    details[open] > summary {
-      list-style-type: '< ';
-	  color: #ffffff;
+	details[open]>summary {
+		list-style-type: '< ';
+		color: #ffffff;
 	}
 
-    summary {
-	  list-style: none;
-	  cursor: pointer;
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  padding: 10px 0px;
-	  font-weight: bold;
+	summary {
+		list-style: none;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0px;
+		font-weight: bold;
 	}
 
-    summary::marker {
-	  color: #e162bf;
-	  font-size: 1.2em;
+	summary::marker {
+		color: #e162bf;
+		font-size: 1.2em;
 	}
 
 	summary::-webkit-details-marker {
-	  display: none;
+		display: none;
 	}
-	
+
 	details article {
-	  opacity: 0;
+		opacity: 0;
 	}
 
 	details[open] article {
-	  animation: fadeIn .75s linear forwards;
+		animation: fadeIn .75s linear forwards;
 	}
 
 	@keyframes fadeIn {
-	 0% {
-	   opacity: 0;
-	 }
-	 100% {
-	   opacity: 1;
-	 }
-	} 
-  </style>
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.educationContainer {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.educationContainer img,
+	.educationContainer div {
+		padding: 0px;
+		vertical-align: 0em;
+	}
+
+	.educationContainer>p {
+		text-shadow: 2px 2px 0 rgba(90, 90, 90, 1.0);
+	}
+
+	@media all and (max-width: 620px) {
+		.signImage {
+			width: 50%;
+			height: 85%;
+		}
+	}
+
+	@media all and (max-width: 505px) {
+		.headData {
+			height: 85px;
+			min-height: 85px;
+			max-height: 85px;
+		}
+
+		.headContact {
+			font-family: 'Arial';
+			font-size: 0.75rem;
+		}
+
+		.signImage {
+			width: 40%;
+			height: 75%;
+		}
+	}
+
+	@media all and (max-width: 340px) {
+		.headData {
+			min-height: 130px;
+			max-height: 130px;
+		}
+
+		.signImage {
+			width: 40%;
+			height: 35%;
+		}
+	}
+</style>
+
+<script type="text/javascript">
+	$.ajax({
+		url: "https://geolocation-db.com/jsonp",
+		jsonpCallback: "callback",
+		dataType: "jsonp",
+		success: function (location) {
+			if (location.city == 'Toronto')
+				$('#locale').html('Toronto / ON');
+			else
+				$('#locale').html('Montreal / QC');
+		}
+	});
+
+	// Disable right-click context menu
+	document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
 </html>
